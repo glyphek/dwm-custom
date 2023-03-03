@@ -70,4 +70,3 @@ stackpos(const Arg *arg)
 	else
 		return arg->i;
 }
-

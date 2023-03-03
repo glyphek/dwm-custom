@@ -128,4 +128,3 @@ getgaps(Monitor *m, int *oh, int *ov, int *ih, int *iv, unsigned int *nc)
 	*iv = m->gappiv*ie; // inner vertical gap
 	*nc = n;            // number of clients
 }
-

@@ -13,4 +13,3 @@ fullscreen(const Arg *arg)
 	}
 	togglebar(arg);
 }
-

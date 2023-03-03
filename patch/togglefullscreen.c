@@ -7,4 +7,3 @@ togglefullscreen(const Arg *arg)
 
 	setfullscreen(c, !c->isfullscreen);
 }
-

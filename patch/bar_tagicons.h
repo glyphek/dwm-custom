@@ -5,4 +5,3 @@ enum {
 };
 
 static char * tagicon(Monitor *m, int tag);
-

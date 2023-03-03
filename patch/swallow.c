@@ -209,4 +209,3 @@ swallowingclient(Window w)
 
 	return NULL;
 }
-

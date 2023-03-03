@@ -8,4 +8,3 @@
 static void focusstack(const Arg *arg);
 static void pushstack(const Arg *arg);
 static int stackpos(const Arg *arg);
-
