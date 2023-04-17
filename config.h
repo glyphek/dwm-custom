@@ -66,9 +66,6 @@ static char urgbgcolor[]                 = "#222222";
 static char urgbordercolor[]             = "#ff0000";
 static char urgfloatcolor[]              = "#ff0000";
 
-
-
-
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
 	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor,      normfloatcolor },
@@ -81,10 +78,6 @@ static char *colors[][ColCount] = {
 	[SchemeHidSel]       = { hidselfgcolor,    hidselbgcolor,    c000000,              c000000 },
 	[SchemeUrg]          = { urgfgcolor,       urgbgcolor,       urgbordercolor,       urgfloatcolor },
 };
-
-
-
-
 
 /* Tags
  * In a traditional dwm the number of tags in use can be changed simply by changing the number
@@ -120,7 +113,6 @@ static char *tagicons[][NUMTAGS] =
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
 
-
 /* There are two options when it comes to per-client rules:
  *  - a typical struct table or
  *  - using the RULE macro
@@ -150,8 +142,6 @@ static const Rule rules[] = {
 	{ TERMCLASS,  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 };
 
-
-
 /* Bar rules allow you to configure what is shown where on the bar, as well as
  * introducing your own bar modules.
  *
@@ -178,15 +168,12 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
-
-
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
-
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -204,7 +191,6 @@ static const Layout layouts[] = {
 	{ MOD, XK_e,     ACTION##stack, {.i = 1 } }, \
 	{ MOD, XK_a,     ACTION##stack, {.i = 2 } }, \
 	{ MOD, XK_z,     ACTION##stack, {.i = -1 } },
-
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -225,7 +211,6 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const char *cmdprintscreen[]  = { "scrot", "-q 100", "/home/glyphe/images/screenshots/%Y-%m-%d-%s_$wx$h.jpg", NULL };
 static const char *cmdprintscreenalt[]  = { "scrot", "-u", "-q 100", "/home/glyphe/images/screenshots/%Y-%m-%d-%s_$wx$h.jpg", NULL };
-
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
@@ -303,7 +288,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                                  7)
 	TAGKEYS(                        XK_9,                                  8)
 };
-
 
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */

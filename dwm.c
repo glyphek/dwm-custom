@@ -2071,6 +2071,8 @@ showhide(Client *c)
 void
 spawn(const Arg *arg)
 {
+	struct sigaction sa;
+
 	if (arg->v == dmenucmd) {
 		dmenumon[0] = '0' + selmon->num;
 	}
@@ -2080,6 +2082,12 @@ spawn(const Arg *arg)
 		}
 
 		setsid();
+
+		sigemptyset(&sa.sa_mask);
+		sa.sa_flags = 0;
+		sa.sa_handler = SIG_DFL;
+		sigaction(SIGCHLD, &sa, NULL);
+
 		execvp(((char **)arg->v)[0], (char **)arg->v);
 		die("dwm: execvp '%s' failed:", ((char **)arg->v)[0]);
 	}
@@ -2628,7 +2636,7 @@ zoom(const Arg *arg)
 	if (!c) {
 		return;
 	}
-	if (!c->mon->lt[c->mon->sellt]->arrange || !c || c->isfloating) {
+	if (!c->mon->lt[c->mon->sellt]->arrange || c->isfloating) {
 		return;
 	}
 
